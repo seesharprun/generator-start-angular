@@ -3,7 +3,7 @@
     "command": "node",
     "isShellCommand": true,
     "args": [
-        "${workspaceRoot}\\node_modules\\typescript\\bin\\tsc", 
+        "${workspaceRoot}//node_modules//typescript//bin//tsc", 
         "-w",
         "-p", 
         "."
