@@ -48,7 +48,12 @@ module.exports = generators.Base.extend({
                 this.templatePath('tasks.json'),
                 this.destinationPath('.vscode/tasks.json'), 
                 { }
-            );      
+            );
+            this.fs.copyTpl(
+                this.templatePath(this.folderName + '.gitignore'),
+                this.destinationPath('.gitignore'),
+                { }
+            );          
         },
         writeHTMLFiles: function() {    
             this.fs.copyTpl(
@@ -65,7 +70,7 @@ module.exports = generators.Base.extend({
                 this.templatePath(this.folderName + 'child.component.html'),
                 this.destinationPath('app/views/child.component.html'), 
                 { }
-            );    
+            );
         },
         writeApplication: function() {
             this.fs.copyTpl(
