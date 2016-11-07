@@ -50,7 +50,7 @@ module.exports = generators.Base.extend({
                 { }
             );
             this.fs.copyTpl(
-                this.templatePath(this.folderName + '.gitignore'),
+                this.templatePath('.gitignore'),
                 this.destinationPath('.gitignore'),
                 { }
             );          
