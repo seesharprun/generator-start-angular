@@ -15,6 +15,7 @@ The template is designed to integrate tightly with the Build, Tasks and Debug fe
 ## Getting Started
 
 1. Create an Angular Project
+
     ```shell
     yo start-angular
     ```
@@ -24,3 +25,11 @@ The template is designed to integrate tightly with the Build, Tasks and Debug fe
 1. Press ``F5`` in Visual Studio Code to debug the application.
 
     > TypeScript Compiler runs in *watch* mode allowing you to modify HTML and TS files and see changes reflected in the running application.
+
+### Bootstrap 4
+
+Want Bootstrap 4 styling?
+
+``` shell
+yo start-angular --bootstrap
+```
