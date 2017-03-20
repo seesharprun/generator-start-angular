@@ -1,14 +1,9 @@
 {
     "version": "0.1.0",
-    "command": "node",
+    "command": "tsc",
     "isShellCommand": true,
-    "args": [
-        "${workspaceRoot}//node_modules//typescript//bin//tsc", 
-        "-w",
-        "-p", 
-        "."
-    ],
+    "args": ["-w", "-p", "."],
     "showOutput": "always",
-    "isWatching": true,
+    "isBackground": true,
     "problemMatcher": "$tsc-watch"
 }
