@@ -4,6 +4,7 @@ module.exports = generators.Base.extend({
     constructor: function() {
         generators.Base.apply(this, arguments);        
         this.option('bootstrap');
+        this.option('v2');
     },
     prompting: {
         logIntro: function () {            
@@ -14,7 +15,8 @@ module.exports = generators.Base.extend({
     },
     configuring : {
         configuration: function () {
-            this.folderName = this.options.bootstrap ? 'bootstrap/' : '';
+            this.versionFolderName = this.options.v2 ? 'v2.x/' : 'v4.x/';
+            this.styleFolderName = this.options.bootstrap ? 'bootstrap/' : '';
         }
     },
     writing: {
@@ -35,11 +37,6 @@ module.exports = generators.Base.extend({
                 { }
             );   
             this.fs.copyTpl(
-                this.templatePath('package.json'),
-                this.destinationPath('package.json'), 
-                { }
-            );   
-            this.fs.copyTpl(
                 this.templatePath('systemjs.config.js'),
                 this.destinationPath('systemjs.config.js'), 
                 { }
@@ -55,44 +52,51 @@ module.exports = generators.Base.extend({
                 { }
             );          
         },
-        writeHTMLFiles: function() {    
-            this.fs.copyTpl(
-                this.templatePath(this.folderName + 'index.html'),
-                this.destinationPath('index.html'), 
-                { }
-            );    
-            this.fs.copyTpl(
-                this.templatePath(this.folderName + 'app.component.html'),
-                this.destinationPath('app/views/app.component.html'), 
-                { }
-            );
-            this.fs.copyTpl(
-                this.templatePath(this.folderName + 'child.component.html'),
-                this.destinationPath('app/views/child.component.html'), 
-                { }
-            );
-        },
         writeApplication: function() {
             this.fs.copyTpl(
-                this.templatePath('app.component.ts'),
+                this.templatePath(this.versionFolderName + 'app.component.ts'),
                 this.destinationPath('app/app.component.ts'), 
                 { }
             );
             this.fs.copyTpl(
-                this.templatePath('child.component.ts'),
+                this.templatePath(this.versionFolderName + 'child.component.ts'),
                 this.destinationPath('app/child.component.ts'), 
                 { }
             );
             this.fs.copyTpl(
-                this.templatePath('app.module.ts'),
+                this.templatePath(this.versionFolderName + 'app.module.ts'),
                 this.destinationPath('app/app.module.ts'), 
                 { }
             );
             this.fs.copyTpl(
-                this.templatePath('main.ts'),
+                this.templatePath(this.versionFolderName + 'main.ts'),
                 this.destinationPath('app/main.ts'), 
                 { }
             );
+        },
+        writeHTMLFiles: function() {    
+            this.fs.copyTpl(
+                this.templatePath(this.versionFolderName + this.styleFolderName + 'index.html'),
+                this.destinationPath('index.html'), 
+                { }
+            );    
+            this.fs.copyTpl(
+                this.templatePath(this.versionFolderName + this.styleFolderName + 'app.component.html'),
+                this.destinationPath('app/views/app.component.html'), 
+                { }
+            );
+            this.fs.copyTpl(
+                this.templatePath(this.versionFolderName + this.styleFolderName + 'child.component.html'),
+                this.destinationPath('app/views/child.component.html'), 
+                { }
+            );
+        },
+        writePackageFiles: function() {     
+            this.fs.copyTpl(
+                this.templatePath(this.versionFolderName + 'package.json'),
+                this.destinationPath('package.json'), 
+                { }
+            );    
         }
     },
     install: {
