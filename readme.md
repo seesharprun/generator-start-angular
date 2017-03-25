@@ -36,10 +36,16 @@ Want Bootstrap 4 styling?
 yo start-angular --bootstrap
 ```
 
-#### Angular 2
+### Angular 2
 
 Need to go back to Angular 2?
 
 ```shell
 yo start-angular --v2
+```
+
+Angular 2 still works with Bootstrap!
+
+``` shell
+yo start-angular --v2 --bootstrap
 ```
