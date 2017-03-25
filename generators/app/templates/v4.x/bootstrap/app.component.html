@@ -1,9 +1,0 @@
-<h1 class="display-3 mb-5">
-    {{title}}
-</h1>
-
-<div  style="width: 50rem;" class="mx-auto">
-    <ul class="list-group mt-5">
-        <child *ngFor="let item of items; let count = index;" [content]="item" [label]="count + 1"></child>
-    </ul>
-</div>

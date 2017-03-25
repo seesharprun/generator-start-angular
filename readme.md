@@ -28,14 +28,6 @@ The template is designed to integrate tightly with the Build, Tasks and Debug fe
 
     > The TypeScript compiler runs in *watch* mode allowing you to modify HTML and TS files and see changes reflected in the running application.
 
-### Bootstrap 4
-
-Want Bootstrap 4 styling?
-
-``` shell
-yo start-angular --bootstrap
-```
-
 ### Angular 2
 
 Need to go back to Angular 2?
@@ -44,8 +36,12 @@ Need to go back to Angular 2?
 yo start-angular --v2
 ```
 
-Angular 2 still works with Bootstrap!
+### Generator Options
 
-``` shell
-yo start-angular --v2 --bootstrap
-```
+| Option | Description |
+| --- | --- |
+| ``--bootstrap`` | Adds Bootstrap v4 Alpha 6 styling to the generated Angular application. |
+| ``--nochild`` | Excludes the example child component from the generated Angular application. |
+| ``--v2`` | Generates the Angular application using v2.x+ libraries instead of Angular v4.x+ libraries. |
+
+> You can use the generator options in any combination.

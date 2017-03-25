@@ -18,6 +18,8 @@
     "angular"
   ],
   "dependencies": {
+    "gulp-beautify": "^2.0.1",
+    "gulp-filter": "^5.0.0",
     "jsonschema": "^1.1.0",
     "node-uuid": "^1.4.7",
     "yeoman-generator": "^0.20.2"

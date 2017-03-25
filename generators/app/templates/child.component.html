@@ -1,0 +1,10 @@
+<% if(angularVersion == 4) { -%>
+<li<% if (useBootstrap) { %> class="list-group-item justify-content-between"<% } %>>
+  {{content}}
+  <% if (useBootstrap) { %><span class="badge badge-default badge-pill">{{label}}</span><% } else { %><em>[{{label}}]</em><% } %>
+</li>
+<% } else if (angularVersion == 2) { -%>
+<p<% if (useBootstrap) { %> class="lead"<% } %>>
+  {{body}}
+</p>
+<% } %>

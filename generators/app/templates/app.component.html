@@ -1,0 +1,13 @@
+<h1<% if (useBootstrap) { %> class="display-3 mb-5"<% } %>>
+    {{title}}
+</h1>
+
+<% if(includeChild) { if(angularVersion == 4) { -%>
+<section<% if (useBootstrap) { %> style="width: 50rem;" class="mx-auto"<% } %>>
+    <ul<% if (useBootstrap) { %> class="list-group mt-5"<% } %>>
+        <child *ngFor="let item of items; let count = index;" [content]="item" [label]="count + 1"></child>
+    </ul>
+</section>
+<% } else if(angularVersion == 2) { -%>
+<child [body]="message"></child>
+<% } } -%>
