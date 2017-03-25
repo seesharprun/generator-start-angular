@@ -1,15 +1,15 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent }   from './app.component';
-import { ChildComponent } from './child.component';
+import { AppComponent }   from './app.component';<% if (includeChild) { %>
+import { ChildComponent } from './child.component';<% } %>
 
 @NgModule({
     imports:      [ 
         BrowserModule 
     ],
     declarations: [ 
-        AppComponent,
-        ChildComponent
+        AppComponent<% if (includeChild) { %>,
+        ChildComponent<% } %>
     ],
     bootstrap: [ AppComponent ]
 })
