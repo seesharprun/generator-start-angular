@@ -11,18 +11,24 @@ The template is designed to integrate tightly with the Build, Tasks and Debug fe
 * Install the generator from NPM using:
 
     ```shell
-    npm install --general yo generator-start-angular
+    npm install --global yo generator-start-angular
     ```
 
 ## Getting Started
 
-1. Create an Angular Project
+1. Create an Angular Project:
 
     ```shell
     yo start-angular
     ```
-    
+
     > Creates a new project in Visual Studio Code that is configured to debug using NPM *lite-server* package. ``npm install`` is ran automatically for you.
+
+1. Open the application in Visual Studio Code:
+
+    ```shell
+    code .
+    ```
 
 1. Press ``F5`` in Visual Studio Code to debug the application.
 
