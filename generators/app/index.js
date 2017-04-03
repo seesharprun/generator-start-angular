@@ -118,7 +118,14 @@ module.exports = generators.Base.extend({
                 );
             }
         },
-        writeHTMLFiles: function() {    
+        writeHTMLFiles: function() {   
+            if (this.bootstrap) {
+                this.fs.copyTpl(
+                    this.templatePath('style.css'),
+                    this.destinationPath('media/style.css'),
+                    { }
+                );                
+            }
             this.fs.copyTpl(
                 this.templatePath('index.html'),
                 this.destinationPath('index.html'), 
