@@ -11,7 +11,7 @@ The template is designed to integrate tightly with the Build, Tasks and Debug fe
 * Install the generator from NPM using:
 
     ```shell
-    npm install generator-start-angular
+    npm install --general yo generator-start-angular
     ```
 
 ## Getting Started
