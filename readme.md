@@ -2,7 +2,7 @@
 
 Creates a blank, empty [Angular 4](http://angularjs.blogspot.com/2017/03/angular-400-now-available.html) project ideal for use with Visual Studio Code.
 
-The template is designed to integrate tightly with the Build, Tasks and Debug features of <http://twitter.com/code>.
+The template is designed to integrate tightly with the Build, Tasks and Debug features of [Visual Studio Code](http://code.visualstudio.com).
 
 ## Install
 
